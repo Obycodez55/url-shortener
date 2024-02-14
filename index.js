@@ -29,6 +29,10 @@ app.post("/", function(req, res) {
     res.render("index", { locals})
 });
 
+app.get("mi.ly/:shortid", (req, res) => {
+    const shortid = req.params.shortid;
+});
+
 app.listen(PORT, ()=>{
     console.log(`Server is running on port ${PORT}`);
 })
