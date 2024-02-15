@@ -14,22 +14,37 @@ connectDB();
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
+app.use(express.static("public"));
+
 // Templating Engine
 app.set("view engine", "ejs");
 
-app.get("/", function(req, res) {
+app.get("/", (req, res) => {
     res.render("index")
 });
 
-app.post("/", function(req, res) {
-    console.log(req.body.link);
+app.post("/", async (req, res) => {
+    const link = req.body.link;
+    try {
+        let data = await Shorturl.findOne({originalLink: link});
+    if (!data){
+        try {
+            data = await Shorturl.create({originalLink: link});
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    console.log(data);
     const locals = {
-        message: `Your link is ${req.body.link}`
+        message: `Your new link is ${data.shortlink}`
     };
-    res.render("index", { locals})
+    res.render("index", locals)
+    } catch (error) { 
+        console.log(error);
+    }  
 });
 
-app.get("mi.ly/:shortid", (req, res) => {
+app.get("mi.ly/:shortid", async (req, res) => {
     const shortid = req.params.shortid;
 });
 
