@@ -747,8 +747,8 @@ select {
   margin-left: 0.5rem;
 }
 
-.ml-72 {
-  margin-left: 18rem;
+.ml-3 {
+  margin-left: 0.75rem;
 }
 
 .mt-1 {
@@ -765,10 +765,6 @@ select {
 
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.ml-3 {
-  margin-left: 0.75rem;
 }
 
 .flex {
@@ -883,6 +879,16 @@ select {
   background-color: rgb(127 239 189 / var(--tw-bg-opacity));
 }
 
+.bg-secondary-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(76 143 113 / var(--tw-bg-opacity));
+}
+
+.bg-secondary-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(102 191 151 / var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -943,6 +949,11 @@ body {
   background-size: 50px;
   background-position: 170px 0px;
   background-image: url("/images/LoDi-arrow\ moving\ with\ dots-2024-02-15-02_33_14-0fj3b2yxxgeh9yqlhcrw1c.png");
+}
+
+.hover\:bg-secondary-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(76 143 113 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 1024px) {

@@ -9,6 +9,7 @@
     />
     <title>Mini - Link || Shorten your links swiftly</title>
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="shortcut icon" href="/images/LoDi-i want to create a website that shortens URL and the name is mini-link-2024-02-15-00_24_20-ldrfpb75j5llt0msxl1ef.png" type="image/x-icon">
   </head>
   <body class="flex justify-center items-center h-dvh w-full">
     <div
@@ -35,24 +36,25 @@
           name="link"
           id="link-input"
           placeholder="Insert URL"
+          required
           class="rounded-md outline-none border-none mt-1"
         />
         <button
-          class="btnbg bg-secondary-500 mt-5 rounded-md h-10 w-1/3 font-semibold text-white"
+          class="btnbg bg-secondary-600 hover:bg-secondary-700 mt-5 rounded-md h-10 w-1/3 font-semibold text-white"
         >
           Shorten
         </button>
 
         <% if (data) { %>
         <p class="text-white flex font-bold items-center mt-6">
-          Enjoy
+          Short - URL
           <a
             href="<%= data.shortlink %>"
             target="_blank"
             draggable="true"
             id="short_link"
-            class="font-normal p-2 w-max h-7 rounded-sm cursor-pointer bg-secondary-500 ml-2 flex justify-center items-center"
-            >http://localhost:9000/<%= data.shortlink %></a
+            class="font-normal p-2 w-max h-7 rounded-sm cursor-pointer bg-secondary-600 ml-2 flex justify-center items-center"
+            >mi-ly.onrender.com/<%= data.shortlink %></a
           >
           <span id="copyIcon" class="text-white ml-3">
             <svg
