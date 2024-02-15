@@ -6,7 +6,16 @@ module.exports = {
     "./public/**/*.{html,js,ejs}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        primary:{
+          500: "#CC59D2",
+        },
+        secondary:{
+          500:"#7FEFBD",
+        },
+      },
+    },
   },
   plugins: [require('@tailwindcss/forms')],
 }

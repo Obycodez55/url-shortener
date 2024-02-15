@@ -4,4 +4,24 @@
 
 body {
     @apply w-full;
+    background-color: #c99dd4;
+}
+.containerr{
+   background-image: url("/images/kennedy.png");
+   background-repeat: no-repeat;
+   background-size: 300px;
+   background-position: 420px 140px;
+}
+@media screen and (max-width:400px){
+    .containerr{
+        background-size: 200px;
+        background-position: 150px 220px;
+    }
+}
+.btnbg{
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: 170px 0px;
+    
+    background-image: url("/images/LoDi-arrow\ moving\ with\ dots-2024-02-15-02_33_14-0fj3b2yxxgeh9yqlhcrw1c.png");
 }

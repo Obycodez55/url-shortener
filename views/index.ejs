@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Mini - Link | shorten your URLs in a short time and get to use it anytime, anywhere">
     <title>Mini - Link || Shorten your links swiftly</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css"
 </head>
-<body>
-    <h1 class="font-bold">Welcome to Mini -  link</h1>
-    <form action="/" method="post">
-        <label for="link" id="link"> Input your long URL</label>
-        <input type="text" name="link" id="link-input">
-        <input type="submit" value="Shorten">
-    </form>
-
-    <% if (locals) { %>
-     <div><%= locals.message %></div>
-    <% } %>
+<body class="flex justify-center items-center h-dvh w-full">
+    <div class="lg:w-1/2 w-5/6 h-96 shadow-md p-5 rounded-md bg-primary-500 containerr"  >
+        <div class="rounded-full w-full gap-2 items-center h-8 flex">
+            <img src="/images/LoDi-i want to create a website that shortens URL and the name is mini-link-2024-02-15-00_24_20-ldrfpb75j5llt0msxl1ef.png" alt="" class="rounded-full w-8 h-8 ">
+            <h1 class="font-bold text-white">Mini -  link</h1>
+        </div>
+        <form action="/" method="post" class="flex flex-col border-blue-500 w-full h-5/6 mt-3" >
+            <label for="link" id="link" class="text-white font-semibold "> Input Custom URL</label>
+            <input type="text" name="link" id="link-input" placeholder="Insert URL" class="rounded-md outline-none border-none mt-1 ">
+            <button class="btnbg bg-secondary-500 mt-5 rounded-md h-10 w-1/3 font-semibold text-white">Shorten</button>
+            <p class="text-white flex font-bold items-center mt-6">Enjoy - <a href="" target="_blank" draggable="true" class="font-normal p-2 w-max h-7 rounded-sm cursor-pointer bg-secondary-500 ml-2 flex justify-center items-center">jfbewjeh</a> <svg class="ml-1 w-7 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.012 0 1.867.668 2.15 1.586m-5.8 0c-.376.023-.75.05-1.124.08C9.095 4.01 8.25 4.973 8.25 6.108V8.25m0 0H4.875c-.621 0-1.125.504-1.125 1.125v11.25c0 .621.504 1.125 1.125 1.125h9.75c.621 0 1.125-.504 1.125-1.125V9.375c0-.621-.504-1.125-1.125-1.125H8.25ZM6.75 12h.008v.008H6.75V12Zm0 3h.008v.008H6.75V15Zm0 3h.008v.008H6.75V18Z" />
+              </svg>
+              </p>
+        </form>
+    </div>
 </body>
 </html>
