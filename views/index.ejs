@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mini - Link | shorten your URLs in a short time and get to use it anytime, anywhere">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mini - Link | shorten your URLs in a short time and get to use it anytime, anywhere"
+    />
     <title>Mini - Link || Shorten your links swiftly</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <h1 class="font-bold">Welcome to Mini -  link</h1>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <h1 class="font-bold">Welcome to Mini - link</h1>
     <form action="/" method="post">
-        <label for="link" id="link"> Input your long URL</label>
-        <input type="text" name="link" id="link-input">
-        <input type="submit" value="Shorten">
+      <label for="link" id="link"> Input your long URL</label>
+      <input type="text" name="link" id="link-input" />
+      <input type="submit" value="Shorten" />
     </form>
 
-    <% if (locals) { %>
-     <div><%= locals.message %></div>
+    <% if (data) { %>
+    <div>
+      <a id="short_link" href="/<%= data.shortlink %>"
+        >http://localhost:9000/<%= data.shortlink %></a
+      >
+      <button>Copy</button>
+    </div>
     <% } %>
-</body>
+
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

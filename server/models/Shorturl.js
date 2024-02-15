@@ -12,7 +12,7 @@ const ShorturlSchema = new Schema({
     type: String,
     required: true,
     unique: true,
-    default: shortid.generate()
+    default: shortid.generate
   },
   No_of_clicks: {
     type: Number,
