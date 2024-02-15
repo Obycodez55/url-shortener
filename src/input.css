@@ -7,10 +7,15 @@ body {
     background-color: #c99dd4;
 }
 .containerr{
+    @apply z-10 relative;
    background-image: url("/images/kennedy.png");
    background-repeat: no-repeat;
    background-size: 300px;
    background-position: 420px 140px;
+}
+.containerr::after{
+    content: "";
+    @apply block w-full h-full bg-primary-500 absolute top-0 left-0 opacity-30 -z-10;
 }
 @media screen and (max-width:400px){
     .containerr{

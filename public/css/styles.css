@@ -743,10 +743,6 @@ select {
   margin-left: 0.25rem;
 }
 
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -797,6 +793,10 @@ select {
 
 .h-dvh {
   height: 100dvh;
+}
+
+.min-h-7 {
+  min-height: 1.75rem;
 }
 
 .w-1\/3 {
@@ -874,27 +874,18 @@ select {
   background-color: rgb(204 89 210 / var(--tw-bg-opacity));
 }
 
-.bg-secondary-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(127 239 189 / var(--tw-bg-opacity));
-}
-
-.bg-secondary-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(76 143 113 / var(--tw-bg-opacity));
-}
-
 .bg-secondary-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(102 191 151 / var(--tw-bg-opacity));
 }
 
-.p-2 {
-  padding: 0.5rem;
-}
-
 .p-5 {
   padding: 1.25rem;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .font-bold {
@@ -930,11 +921,27 @@ body {
   background-color: #c99dd4;
 }
 
-.containerr{
+.containerr {
+  position: relative;
+  z-index: 10;
   background-image: url("/images/kennedy.png");
   background-repeat: no-repeat;
   background-size: 300px;
   background-position: 420px 140px;
+}
+
+.containerr::after{
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: -10;
+  display: block;
+  height: 100%;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(204 89 210 / var(--tw-bg-opacity));
+  opacity: 0.3;
 }
 
 @media screen and (max-width:400px){
@@ -957,21 +964,29 @@ body {
 }
 
 @media not all and (min-width: 768px) {
+  .max-md\:ml-0 {
+    margin-left: 0px;
+  }
+
   .max-md\:hidden {
     display: none;
   }
 }
 
-@media (min-width: 1024px) {
-  .lg\:h-5\/6 {
-    height: 83.333333%;
+@media not all and (min-width: 640px) {
+  .max-sm\:tracking-tight {
+    letter-spacing: -0.025em;
   }
+}
 
+@media (min-width: 768px) {
+  .md\:p-2 {
+    padding: 0.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
   .lg\:w-1\/2 {
     width: 50%;
-  }
-
-  .lg\:w-5\/6 {
-    width: 83.333333%;
   }
 }
